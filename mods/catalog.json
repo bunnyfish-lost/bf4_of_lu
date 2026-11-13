@@ -1,0 +1,18 @@
+{
+  "formatVersion": 1,
+  "defaultVersions": {
+    "death-fast": "1.0.0",
+    "weapon-tuning": "1.2.0",
+    "third-person": "1.0.0",
+    "movement": "1.0.0",
+    "auto-spot": "1.0.0",
+    "team-spawn": "1.0.0",
+    "supply-multiplier": "1.0.0",
+    "vehicle-summon": "1.0.0",
+    "battle-audio": "1.1.0",
+    "auto-aim": "1.2.0",
+    "enemy-display": "1.2.0",
+    "one-hit": "1.2.0",
+    "invincible": "1.2.0"
+  }
+}

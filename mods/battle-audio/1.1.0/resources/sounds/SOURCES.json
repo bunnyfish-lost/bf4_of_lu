@@ -1,0 +1,119 @@
+{
+  "killSounds": [
+    {
+      "file": "builtin-killsound_bf1_normal.wav",
+      "source": "https://github.com/m4a1deathDawn/Hit_Kill_Sounds",
+      "sourcePath": "audio/KillSounds/BF1/killsound_bf1_normal.wav",
+      "commit": "c89187eab0ec3f6a0d6c80cb498f671b4a6be841",
+      "gitBlob": "77731e4cf8bc9f4af3a5a23040bd91310aa17537",
+      "sha256": "1c6f3c149fa16417fdafb1cea6fb5834b3e861ca1becfb01e97090c0a6e7f508"
+    },
+    {
+      "file": "builtin-killsound_bf1_headshot.wav",
+      "source": "https://github.com/m4a1deathDawn/Hit_Kill_Sounds",
+      "sourcePath": "audio/KillSounds/BF1/killsound_bf1_headshot.wav",
+      "commit": "c89187eab0ec3f6a0d6c80cb498f671b4a6be841",
+      "gitBlob": "01aa3d561f07d95f2340e238f1413eca3f3a3457",
+      "sha256": "07738df8853b7ce59276bb21f026fc9fba24f2554f33d290a95e5116cd83c165"
+    },
+    {
+      "file": "builtin-killsound_bfv_normal.wav",
+      "source": "https://github.com/m4a1deathDawn/Hit_Kill_Sounds",
+      "sourcePath": "audio/KillSounds/BFV/killsound_bfv_normal.wav",
+      "commit": "c89187eab0ec3f6a0d6c80cb498f671b4a6be841",
+      "gitBlob": "23690f69e2311d092a441ed4ad4f1638bd1596cc",
+      "sha256": "8c35b1ad502f656bbfd54d41fe5106993dbbd822eb941c897f3df02b74fbd811"
+    },
+    {
+      "file": "builtin-killsound_cf_01.wav",
+      "source": "https://github.com/m4a1deathDawn/Hit_Kill_Sounds",
+      "sourcePath": "audio/KillSounds/cf/killsound_cf_01.wav",
+      "commit": "c89187eab0ec3f6a0d6c80cb498f671b4a6be841",
+      "gitBlob": "80f58eca78556d084f9efd0d25746d522c6ec999",
+      "sha256": "4cf67d8b99e960466ad34f602734574dd7d1c9d114df9a4f0dbcf9f2c89e910e"
+    },
+    {
+      "file": "builtin-cf_headshot.wav",
+      "source": "https://github.com/m4a1deathDawn/Hit_Kill_Sounds",
+      "sourcePath": "audio/KillSounds/cf/cf_headshot.wav",
+      "commit": "c89187eab0ec3f6a0d6c80cb498f671b4a6be841",
+      "gitBlob": "c931b2f8c46e34dc1c59f806fc6ed0cc1169c6d2",
+      "sha256": "87ec1057ac36ea7d3611c3aa353f7f7b52fe93aee96042b10be6958d13e96865"
+    },
+    {
+      "file": "builtin-killsound_cf_02.wav",
+      "source": "https://github.com/m4a1deathDawn/Hit_Kill_Sounds",
+      "sourcePath": "audio/KillSounds/cf/killsound_cf_02.wav",
+      "commit": "c89187eab0ec3f6a0d6c80cb498f671b4a6be841",
+      "gitBlob": "6fe0f2453a909ab9e8b7ab4bad43e7ccda744109",
+      "sha256": "27c75224088ede4fefbbc403c4ef5101a7cc69a68923a8c5f9ac1e65d62a996b"
+    },
+    {
+      "file": "builtin-killsound_cf_03.wav",
+      "source": "https://github.com/m4a1deathDawn/Hit_Kill_Sounds",
+      "sourcePath": "audio/KillSounds/cf/killsound_cf_03.wav",
+      "commit": "c89187eab0ec3f6a0d6c80cb498f671b4a6be841",
+      "gitBlob": "038431f1eac60a080819a7d5530a7d289bbe7472",
+      "sha256": "30e9f303255070b0dedc9dfbc7fc816cc1411c1877595aaa46d56edc8499e227"
+    },
+    {
+      "file": "builtin-killsound_cf_04.wav",
+      "source": "https://github.com/m4a1deathDawn/Hit_Kill_Sounds",
+      "sourcePath": "audio/KillSounds/cf/killsound_cf_04.wav",
+      "commit": "c89187eab0ec3f6a0d6c80cb498f671b4a6be841",
+      "gitBlob": "72bb208ac3026427ce2c7bbb5ce44e43ef055fc2",
+      "sha256": "3791cc05330ea094afc4d40ce0bdf4d25ac5510e585e735f588034abdcb72870"
+    },
+    {
+      "file": "builtin-killsound_cf_05.wav",
+      "source": "https://github.com/m4a1deathDawn/Hit_Kill_Sounds",
+      "sourcePath": "audio/KillSounds/cf/killsound_cf_05.wav",
+      "commit": "c89187eab0ec3f6a0d6c80cb498f671b4a6be841",
+      "gitBlob": "5509b52eade7c46570b7d808ea64d4d674e02f24",
+      "sha256": "628131d6074b8eebe214a4faa60ed9fd9ec0bbf896ef04fe98946e88b047a37f"
+    },
+    {
+      "file": "builtin-killsound_cf_06.wav",
+      "source": "https://github.com/m4a1deathDawn/Hit_Kill_Sounds",
+      "sourcePath": "audio/KillSounds/cf/killsound_cf_06.wav",
+      "commit": "c89187eab0ec3f6a0d6c80cb498f671b4a6be841",
+      "gitBlob": "9019674e3f5bdfd77883bab50252eed07ff7bd7d",
+      "sha256": "8d06ce1e0af5011ef48507c81cb045ad98238aa1f3df39d678d1e5cd51ffde8b"
+    },
+    {
+      "file": "builtin-killsound_cf_07.wav",
+      "source": "https://github.com/m4a1deathDawn/Hit_Kill_Sounds",
+      "sourcePath": "audio/KillSounds/cf/killsound_cf_07.wav",
+      "commit": "c89187eab0ec3f6a0d6c80cb498f671b4a6be841",
+      "gitBlob": "29353138547b7b9c2b8ced5f34c811e61c8764ad",
+      "sha256": "fdfe00038367a83174fa3d678173fb8598e74c88f68469446540ad81eb154fd2"
+    },
+    {
+      "file": "builtin-killsound_cf_08.wav",
+      "source": "https://github.com/m4a1deathDawn/Hit_Kill_Sounds",
+      "sourcePath": "audio/KillSounds/cf/killsound_cf_08.wav",
+      "commit": "c89187eab0ec3f6a0d6c80cb498f671b4a6be841",
+      "gitBlob": "a96f6460bf096aebc17dd3a9cc6d729fbe367e85",
+      "sha256": "5ad70c7ca74e9b022e1456f6cc8f38c0738a45635b91968f4b1c6a62b9db3c55"
+    }
+  ],
+  "deathSounds": {
+    "source": "https://www.bilibili.com/video/BV1k39pYGEbh/",
+    "clips": [
+      {
+        "file": "death-peace-1.wav",
+        "start": 0,
+        "duration": 1.42,
+        "frames": 62622,
+        "channels": 1
+      },
+      {
+        "file": "death-peace-2.wav",
+        "start": 1.46,
+        "duration": 1.59,
+        "frames": 70119,
+        "channels": 1
+      }
+    ]
+  }
+}

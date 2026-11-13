@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType><EnableDefaultCompileItems>false</EnableDefaultCompileItems><EnableDefaultPageItems>false</EnableDefaultPageItems><EnableDefaultApplicationDefinition>false</EnableDefaultApplicationDefinition><TargetFramework>net8.0-windows</TargetFramework><UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms><ImplicitUsings>disable</ImplicitUsings><Nullable>enable</Nullable>
+    <AssemblyName>BF4Launcher-0.3.0-1107</AssemblyName><Version>0.3.0-1107</Version><FileVersion>0.3.0.1107</FileVersion><ApplicationManifest>app.manifest</ApplicationManifest>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting><PublishSingleFile>true</PublishSingleFile><SelfContained>false</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier><IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+  </PropertyGroup>
+<ItemGroup><Compile Remove="engine-template\**\*.cs" /></ItemGroup><ItemGroup><EmbeddedResource Include="engine-payload.zip" LogicalName="BF4Launcher.EnginePayload" /></ItemGroup><ItemGroup><Compile Include="*.cs"/><ApplicationDefinition Include="App.xaml"/><Page Include="MainWindow.xaml"/></ItemGroup><ItemGroup><Resource Include="Assets\Bf4Backdrop.jpg" /></ItemGroup></Project>
+
+
+
+
+

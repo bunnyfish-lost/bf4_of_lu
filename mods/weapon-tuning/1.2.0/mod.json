@@ -1,0 +1,54 @@
+{
+  "formatVersion": 1,
+  "id": "weapon-tuning",
+  "name": "枪械与弹道",
+  "version": "1.2.0",
+  "author": "本地模组库",
+  "side": "both",
+  "kind": "runtime",
+  "adapter": "external",
+  "description": "v2（1107）独立运行组件。独立枪械运行组件：分别控制无散布、无后座、普通弹无下坠和高速弹，并回读客户端／服务端参数。",
+  "dependencies": [],
+  "operations": [],
+  "fields": [
+    {
+      "id": "noSpread",
+      "label": "无散布",
+      "type": "boolean",
+      "defaultValue": false,
+      "hint": "消除子弹随机偏散，让弹着更集中。"
+    },
+    {
+      "id": "noRecoil",
+      "label": "无后座",
+      "type": "boolean",
+      "defaultValue": false,
+      "hint": "清除开火后座参数，控制枪口上跳。"
+    },
+    {
+      "id": "noBulletDrop",
+      "label": "子弹无下坠",
+      "type": "boolean",
+      "defaultValue": false,
+      "hint": "移除普通枪弹的重力下坠。"
+    },
+    {
+      "id": "fastBullets",
+      "label": "高速子弹",
+      "type": "boolean",
+      "defaultValue": false,
+      "hint": "提高普通枪弹的飞行速度。"
+    }
+  ],
+  "runtime": {
+    "apiVersion": 1,
+    "type": "node",
+    "entryPoint": "entry.mjs",
+    "group": "bf4.weapon-tuning",
+    "startWhen": "client",
+    "arguments": [
+      "--context",
+      "{context}"
+    ]
+  }
+}

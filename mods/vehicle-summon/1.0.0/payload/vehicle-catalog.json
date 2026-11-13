@@ -1,0 +1,422 @@
+{
+  "source": "Original author vehicle selection table; not all BF4 DLC assets",
+  "count": 46,
+  "groups": [
+    {
+      "id": "tank",
+      "name": "主战坦克",
+      "vehicles": [
+        {
+          "id": "M1Abrams",
+          "name": "M1 ABRAMS",
+          "aliases": [
+            "M1Abrams",
+            "M1Abrams_Night"
+          ]
+        },
+        {
+          "id": "T90",
+          "name": "T-90A",
+          "aliases": [
+            "T90",
+            "T90_Night"
+          ]
+        },
+        {
+          "id": "CH_MBT_Type99",
+          "name": "TYPE 99 MBT",
+          "aliases": [
+            "CH_MBT_Type99"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ifv",
+      "name": "步兵战车",
+      "vehicles": [
+        {
+          "id": "LAV25",
+          "name": "LAV-25",
+          "aliases": [
+            "LAV25",
+            "LAV25_Night"
+          ]
+        },
+        {
+          "id": "BTR90",
+          "name": "BTR-90",
+          "aliases": [
+            "BTR90",
+            "BTR90_Night"
+          ]
+        },
+        {
+          "id": "CH_IFV_ZBD09",
+          "name": "ZBD-09",
+          "aliases": [
+            "CH_IFV_ZBD09"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aa",
+      "name": "防空车",
+      "vehicles": [
+        {
+          "id": "LAV_AD",
+          "name": "LAV-AD",
+          "aliases": [
+            "LAV_AD",
+            "LAV_AD_Night"
+          ]
+        },
+        {
+          "id": "9K22_Tunguska_M",
+          "name": "9K22 TUNGUSKA-M",
+          "aliases": [
+            "9K22_Tunguska_M",
+            "9K22_Tunguska_M_Night"
+          ]
+        },
+        {
+          "id": "CH_AA_PGZ-95",
+          "name": "TYPE 95 AA",
+          "aliases": [
+            "CH_AA_PGZ-95"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "artillery",
+      "name": "自行火箭炮",
+      "vehicles": [
+        {
+          "id": "HIMARS",
+          "name": "M142 HIMARS",
+          "aliases": [
+            "HIMARS",
+            "HIMARS_Night"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scout_heli",
+      "name": "侦察直升机",
+      "vehicles": [
+        {
+          "id": "AH6_Littlebird",
+          "name": "AH-6J LITTLE BIRD",
+          "aliases": [
+            "AH6_Littlebird",
+            "AH6_Littlebird_Night"
+          ]
+        },
+        {
+          "id": "Z-11w",
+          "name": "Z-11W（俄）",
+          "aliases": [
+            "Z-11w",
+            "Z-11w_Night"
+          ]
+        },
+        {
+          "id": "Z-11w_CH",
+          "name": "Z-11W（中）",
+          "aliases": [
+            "Z-11w_CH"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attack_heli",
+      "name": "攻击直升机",
+      "vehicles": [
+        {
+          "id": "AH1Z",
+          "name": "AH-1Z VIPER",
+          "aliases": [
+            "AH1Z"
+          ]
+        },
+        {
+          "id": "Mi28",
+          "name": "MI-28 HAVOC",
+          "aliases": [
+            "Mi28"
+          ]
+        },
+        {
+          "id": "Z-10w",
+          "name": "Z-10W",
+          "aliases": [
+            "Z-10w"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport_heli",
+      "name": "运输直升机",
+      "vehicles": [
+        {
+          "id": "Venom",
+          "name": "UH-1Y VENOM",
+          "aliases": [
+            "Venom",
+            "Venom_Night"
+          ]
+        },
+        {
+          "id": "Ka-60",
+          "name": "KA-60 KASATKA",
+          "aliases": [
+            "Ka-60",
+            "Ka-60_Kasatka_Night"
+          ]
+        },
+        {
+          "id": "CH_LTHE_Z-9",
+          "name": "Z-9 HAITUN",
+          "aliases": [
+            "CH_LTHE_Z-9"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stealth_jet",
+      "name": "隐形战斗机",
+      "vehicles": [
+        {
+          "id": "F35B",
+          "name": "F-35",
+          "aliases": [
+            "F35B"
+          ]
+        },
+        {
+          "id": "CH_FJET_J-20",
+          "name": "J-20",
+          "aliases": [
+            "CH_FJET_J-20"
+          ]
+        },
+        {
+          "id": "RU_FJET_T-50_Pak_FA",
+          "name": "SU-50",
+          "aliases": [
+            "RU_FJET_T-50_Pak_FA"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attack_jet",
+      "name": "攻击机",
+      "vehicles": [
+        {
+          "id": "A10_THUNDERBOLT",
+          "name": "A-10",
+          "aliases": [
+            "A10_THUNDERBOLT"
+          ]
+        },
+        {
+          "id": "CH_JET_Q5_FANTAN",
+          "name": "Q-5",
+          "aliases": [
+            "CH_JET_Q5_FANTAN"
+          ]
+        },
+        {
+          "id": "SU-25TM",
+          "name": "SU-25TM",
+          "aliases": [
+            "SU-25TM"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attack_boat",
+      "name": "攻击艇",
+      "vehicles": [
+        {
+          "id": "US_FAC-CB90",
+          "name": "RCB-90",
+          "aliases": [
+            "US_FAC-CB90"
+          ]
+        },
+        {
+          "id": "CH_FAC_DV15",
+          "name": "DV-15（中）",
+          "aliases": [
+            "CH_FAC_DV15"
+          ]
+        },
+        {
+          "id": "CH_FAC_DV15_RU",
+          "name": "DV-15（俄）",
+          "aliases": [
+            "CH_FAC_DV15_RU"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport",
+      "name": "地面运输载具",
+      "vehicles": [
+        {
+          "id": "GrowlerITV",
+          "name": "GROWLER ITV",
+          "aliases": [
+            "GrowlerITV"
+          ]
+        },
+        {
+          "id": "CH_FAV_LYT2021",
+          "name": "LYT2021",
+          "aliases": [
+            "CH_FAV_LYT2021"
+          ]
+        },
+        {
+          "id": "VDV Buggy",
+          "name": "VDV BUGGY",
+          "aliases": [
+            "VDV Buggy",
+            "VDV_Buggy"
+          ]
+        },
+        {
+          "id": "US_MRAP-COUGAR",
+          "name": "MRAP",
+          "aliases": [
+            "US_MRAP-COUGAR",
+            "US_MRAP-COUGAR_Night"
+          ]
+        },
+        {
+          "id": "CH_MRAP-ZFB-05",
+          "name": "ZFB-05",
+          "aliases": [
+            "CH_MRAP-ZFB-05"
+          ]
+        },
+        {
+          "id": "RU_MRAP_SPM3",
+          "name": "SPM-3",
+          "aliases": [
+            "RU_MRAP_SPM3",
+            "RU_MRAP_SPM3_Night"
+          ]
+        },
+        {
+          "id": "QUADBIKE",
+          "name": "QUAD BIKE",
+          "aliases": [
+            "QUADBIKE",
+            "QUADBIKE_Night"
+          ]
+        },
+        {
+          "id": "AAV-7A1",
+          "name": "AAV-7A1",
+          "aliases": [
+            "AAV-7A1"
+          ]
+        },
+        {
+          "id": "DPV",
+          "name": "DPV",
+          "aliases": [
+            "DPV"
+          ]
+        },
+        {
+          "id": "KLR650",
+          "name": "DIRTBIKE",
+          "aliases": [
+            "KLR650"
+          ]
+        },
+        {
+          "id": "SkidLoader",
+          "name": "SKID LOADER",
+          "aliases": [
+            "SkidLoader"
+          ]
+        },
+        {
+          "id": "Snowmobile",
+          "name": "SNOWMOBILE",
+          "aliases": [
+            "Snowmobile"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "water_transport",
+      "name": "水上运输载具",
+      "vehicles": [
+        {
+          "id": "RHIB",
+          "name": "RHIB",
+          "aliases": [
+            "RHIB"
+          ]
+        },
+        {
+          "id": "PWC_JetSki",
+          "name": "PWC（水上摩托）",
+          "aliases": [
+            "PWC_JetSki"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stationary",
+      "name": "固定武器",
+      "vehicles": [
+        {
+          "id": "TOW2",
+          "name": "TOW",
+          "aliases": [
+            "TOW2"
+          ]
+        },
+        {
+          "id": "Kornet",
+          "name": "KORNET",
+          "aliases": [
+            "Kornet"
+          ]
+        },
+        {
+          "id": "CH_ATGM_HJ-8",
+          "name": "HJ-8",
+          "aliases": [
+            "CH_ATGM_HJ-8"
+          ]
+        },
+        {
+          "id": "GunShieldTripod",
+          "name": "固定机枪",
+          "aliases": [
+            "GunShieldTripod",
+            "GunShieldTripod_Night"
+          ]
+        }
+      ]
+    }
+  ]
+}

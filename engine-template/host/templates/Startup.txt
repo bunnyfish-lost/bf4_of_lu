@@ -1,0 +1,57 @@
+vars.serverType UNRANKED
+vars.preset CUSTOM false
+vars.mpExperience 
+vars.serverName "BF4 LAN SERVER"
+vars.maxPlayers 64
+vars.gamePassword
+punkBuster.activate
+fairFight.deactivate
+vars.OutHighFrequency 30
+reservedSlotsList.aggressiveJoin true
+vars.commander true
+vars.alwaysAllowSpectators true
+vars.maxSpectators 4
+vars.autoBalance true
+vars.SkillBasedBalance true
+vars.roundStartPlayerCount 0
+vars.roundRestartPlayerCount 0
+vars.killCam true
+vars.friendlyFire false
+vars.regenerateHealth true
+vars.soldierHealth 100
+vars.miniMap true
+vars.hud true
+vars.3dSpotting true
+vars.miniMapSpotting true
+vars.nameTag true
+vars.3pCam true
+vars.forceReloadWholeMags false
+vars.vehicleSpawnAllowed true
+vars.teamKillCountForKick 5
+vars.teamKillValueForKick 0
+vars.teamKillKickForBan 3
+vars.idleTimeout 86400
+vars.idleBanRounds 0
+vars.playerRespawnTime 100
+vars.vehicleSpawnDelay 35
+vars.playerManDownTime 100
+vars.bulletDamage 100
+vars.hitIndicatorsEnabled true
+vars.gameModeCounter 200
+vars.onlySquadLeaderSpawn false
+vars.roundTimeLimit 200
+vars.roundWarmupTimeout 120
+vars.ticketBleedRate 100
+vars.teamKillValueIncrease 1
+vars.unlockMode all
+vars.gunMasterWeaponsPreset 1
+vars.teamFactionOverride 1 0
+vars.teamFactionOverride 2 2
+vars.teamFactionOverride 3 2
+vars.teamFactionOverride 4 0
+vars.isCompetitive false
+vars.roundLockdownCountdown 10
+vars.roundPlayersReadyBypassTimer 180
+vars.roundPlayersReadyMinCount 0
+vars.roundPlayersReadyPercent 0
+vars.teamKillValueDecreasePerSecond 0.05

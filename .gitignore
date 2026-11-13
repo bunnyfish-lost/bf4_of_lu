@@ -1,0 +1,35 @@
+# Launcher build output (root only: mods/<id>/<version>/bin is required).
+/bin/
+/obj/
+/publish/
+/dist/
+/.qa/
+/engine-payload.zip
+# Runtime files when the launcher is run from the repository root.
+/engine/
+/host/
+/data/
+/logs/
+/config.json
+# Generated files, IDE settings and local credentials.
+*.log
+*.tmp
+__pycache__/
+*.py[cod]
+.vs/
+.idea/
+*.user
+*.suo
+.env
+.env.*
+!.env.example
+# Optional intermediate output while rebuilding module source projects.
+/mods/**/source/bin/
+/mods/**/source/obj/
+# Local-only deployment notes must not enter a public source export.
+/WORK-STATE.md
+/audio-fix-backup.txt
+/deploy-*.py
+/finalize-*.py
+/publish-audio-fix.py
+/tests/audio-deployment-processes.json

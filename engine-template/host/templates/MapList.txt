@@ -1,0 +1,7 @@
+MP_Prison ConquestLarge0 1
+XP0_Metro ConquestLarge0 1
+MP_Abandoned ConquestLarge0 1
+MP_Resort ConquestLarge0 1
+MP_Siege ConquestLarge0 1
+XP5_Night_01 ConquestLarge0 1
+XP3_Prpganda ConquestLarge0 1

@@ -1,0 +1,11 @@
+{
+  "launcherApiVersion": 1,
+  "testedLauncher": "0.2.2",
+  "clientSha256": [
+    "0f3b4ca5e4b9642413b8df5d869d94337a8bb690238ae2b2e5a780a68942aeb4",
+    "968d96948c1306c9218a5123f788f18d0b909db30cdf4d673df720f45995a57b"
+  ],
+  "serverSha256": "160ec988aad0632946936a21a9aed1c73f5b906161f2d96b2a085ee65ce183ba",
+  "offlineOwnedInstanceOnly": true,
+  "gameplayAcceptancePending": true
+}

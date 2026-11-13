@@ -1,0 +1,53 @@
+# BF4BlazeServer Fire1/Blaze13
+# 一行一个 键=值；布尔开关 1/0 或 true/false；# 和 // 开头为注释。
+# 地址与端口
+ServerIP=127.0.0.1
+# ISO 国家码回退（例如 CN、KP）；房间明确上报的国家优先，留空表示未知。
+ServerCountry=
+ListenAddress=0.0.0.0
+ClientPort=10040
+BlazeServerPort=10041
+HttpPort=80
+HttpsEnabled=1
+HttpsPort=443
+XmlEnabled=1
+XmlPort=42230
+XmlTls=0
+RedirectorPorts=4217,42127
+RedirectorTls=1
+
+# 相对路径以本配置所在目录为基准；玩家数据统一放在 data
+DataRoot=data
+AssetsRoot=assets
+# 留空使用程序内置固定证书（到期日 2126-11-02）；不再按机器生成。
+CertificatePath=
+CertificateKeyPath=
+CertificatePassword=
+
+# 日志格式：时间:[级别] [收发方向] ID[序号] 组件::命令
+# TraceRpc 为 Blaze 数据包日志，TraceHttp 为 HTTP 请求/方法日志
+# 大量在线玩家的长期运行可以将 TraceRpc / TraceHttp 设为 0
+TraceRpc=1
+TraceHttp=1
+LogLevel=Info
+LogConsoleEnabled=1
+LogFileEnabled=1
+LogDirectory=logs
+LogMaxFileSizeMB=10
+LogRetainedFiles=3
+LogQueueCapacity=8192
+
+# 人机、业务和传输设置
+BotFirstId=133700
+BotLastId=133954
+ListenBacklog=4096
+MaxBatchEntities=4096
+MaxFriendEntries=10000
+MaxGameListSubscriptions=64
+MaxPackGrantCount=256
+HttpBatchLimit=256
+SpartaUseLocalAssets=1
+MaxFrameBytes=4194304
+SendQueueCapacity=128
+RequestTimeoutSeconds=30
+IdleTimeoutSeconds=120

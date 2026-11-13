@@ -1,0 +1,21 @@
+{
+  "bin/BF4WeaponTuning.exe": "ef297e528649a9ad07430f470e1f23c2a92e9889672b66baa8e2367a2cd7d985",
+  "build.ps1": "fc9e2f3e97137ef88670445e116962eb473c7c3b7ffb15e8ba76246f3f4638a2",
+  "compatibility.json": "740e631996ea9eb7722250e8ac19d5d0dd7fc72fab8d17d6a7ff59dbffd484b6",
+  "entry.mjs": "216905825f3694d97be04e283d13191dbffc241223982a558f1fda726faf3a1e",
+  "mod.json": "3ed6de126870a396ca46188ca56f9d03511b340dff26f60e6ada0571b371ae34",
+  "ORIGIN.md": "9b4f4ff6c4423f21c41cdf3987dded25d1e93aed341f454c81c7ee9ce24389a7",
+  "README.md": "20124c4d1f57d4993ba6dad75d531027e053973a016cfcf4e63413321c0c4385",
+  "runtime.mjs": "4740bcc3146733c69217533a5ceac7b71e4ee31805473949cbbfd67ac19ab707",
+  "source/AssemblyInfo.cs": "22fd86fc4671bb6ffa1e469a0cd61d6aff726253fb2a795fddacf478915233d2",
+  "source/BallisticsDriver.cs": "e361767d9fd63cd8d80833f53487affbe4c45c1f782fb01bd6a6faa996a4400f",
+  "source/BallisticsPlan.cs": "2bee2ef5a46ca2c51642173b5434d505fa56903f1fd8aec2cda36327a71a43ad",
+  "source/build.ps1": "08fc4e8dc8a23fde9149e768f3c9fe385581c24d48c75726bbc4e0cb44540b57",
+  "source/GunSwayPlan.cs": "8a2c0466d167d5081f059878d37943a297c4a6b89d4a6988fe69e67ec1b24b46",
+  "source/Memory.cs": "4642f043e2b1d192b345b6ee6f7375c43e02e01bb6bd50244b6f671f82d8fb38",
+  "source/ModIO.cs": "226c048f7611ff73a322f99388f208fc6eedb54d0fd93fe638460b1e3c778549",
+  "source/Roster.cs": "ea7e1ba060efb8f16d8a686880f67f4378c4c2acec41059e06d6450987991ea1",
+  "source/WeaponRuntime.cs": "dd4a25e3a6d1b5ff898158068eb31fc891fc58606abc80795aee4ec6c3539cbf",
+  "source/WeaponSdk.cs": "2cd70df0fd306a9950028ef083a8a16bd0b3d6ab161f979958a9c4270c25442e",
+  "support/rcon.mjs": "14139ae0013f333814f5d14210ea0c92f9e177ede1ad33f16f4a0cf3e7bbb699"
+}

@@ -1,0 +1,78 @@
+{
+  "formatVersion": 1,
+  "id": "vehicle-summon",
+  "name": "载具召唤",
+  "version": "1.0.0",
+  "author": "本地模组库",
+  "side": "server",
+  "kind": "runtime",
+  "adapter": "external",
+  "description": "手动生成当前地图可用载具、清理手动车辆；可选择开启全体聊天 panzer 召唤M1。",
+  "dependencies": [],
+  "operations": [],
+  "fields": [
+    {
+      "id": "limitEnabled",
+      "label": "启用20辆手动车辆上限",
+      "type": "boolean",
+      "defaultValue": true
+    },
+    {
+      "id": "allowUnlimited",
+      "label": "确认允许无上限（关闭上限时需要）",
+      "type": "boolean",
+      "defaultValue": false
+    },
+    {
+      "id": "chatEnabled",
+      "label": "开启 panzer 聊天召唤坦克",
+      "type": "boolean",
+      "defaultValue": false
+    }
+  ],
+  "runtime": {
+    "apiVersion": 1,
+    "type": "node",
+    "entryPoint": "entry.mjs",
+    "group": "bf4.vehicle-summon",
+    "startWhen": "server",
+    "arguments": [
+      "--context",
+      "{context}"
+    ]
+  },
+  "tool": {
+    "id": "vehicle-summon",
+    "title": "载具召唤",
+    "fields": [
+      {
+        "id": "player",
+        "label": "玩家ID（留空为本机玩家）",
+        "type": "text",
+        "defaultValue": ""
+      },
+      {
+        "id": "model",
+        "label": "可用车型（先点击读取）",
+        "type": "select",
+        "defaultValue": "",
+        "options": []
+      }
+    ],
+    "actions": [
+      {
+        "id": "refresh",
+        "label": "读取本图载具"
+      },
+      {
+        "id": "spawn",
+        "label": "生成载具"
+      },
+      {
+        "id": "clear",
+        "label": "清空手动车辆",
+        "confirm": "清空本模块手动生成的载具？不处理地图原有载具。"
+      }
+    ]
+  }
+}

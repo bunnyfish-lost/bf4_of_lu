@@ -1,0 +1,23 @@
+[
+  {
+    "file": "bf4_no_drm.exe",
+    "originalSha256": "0365a62f197d4544b5326b82a682d77af542e973cb3d9cb6ae582cd543fae2d0",
+    "patchedSha256": "0365a62f197d4544b5326b82a682d77af542e973cb3d9cb6ae582cd543fae2d0",
+    "size": 42016256,
+    "bytes": []
+  },
+  {
+    "file": "BF4Launcher.exe",
+    "originalSha256": "d97fcd5abe06434fc762ad89461dcacf52b02161304bacec2303db3c8f454d67",
+    "patchedSha256": "d97fcd5abe06434fc762ad89461dcacf52b02161304bacec2303db3c8f454d67",
+    "size": 12411904,
+    "bytes": []
+  },
+  {
+    "file": "dinput8.dll",
+    "originalSha256": "624cb684dc0709fec26985f9aceeda10f5205a58c14c6826083f1e978a0bc363",
+    "patchedSha256": "624cb684dc0709fec26985f9aceeda10f5205a58c14c6826083f1e978a0bc363",
+    "size": 1586176,
+    "bytes": []
+  }
+]

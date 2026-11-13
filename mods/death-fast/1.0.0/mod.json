@@ -1,0 +1,33 @@
+{
+  "id": "death-fast",
+  "name": "死亡卡片缩短到 1 秒",
+  "version": "1.0.0",
+  "side": "client",
+  "kind": "runtime",
+  "adapter": "death-fast",
+  "description": "缩短本机死亡卡片。配套关闭击杀镜头，并设置重新部署倍率。",
+  "fields": [
+    {
+      "id": "respawn",
+      "label": "重新部署等待倍率",
+      "type": "number",
+      "defaultValue": 1,
+      "min": 1,
+      "max": 300,
+      "unit": "%"
+    }
+  ],
+  "operations": [
+    {
+      "field": "killCam",
+      "value": false
+    },
+    {
+      "field": "respawn",
+      "value": "$respawn"
+    }
+  ],
+  "formatVersion": 1,
+  "author": "本地模组库",
+  "dependencies": []
+}

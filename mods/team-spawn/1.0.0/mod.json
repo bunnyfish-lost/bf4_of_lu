@@ -1,0 +1,14 @@
+{
+  "id": "team-spawn",
+  "name": "全队友部署",
+  "side": "both",
+  "kind": "runtime",
+  "adapter": "vision",
+  "description": "允许在其他小队队友旁部署，需要客户端与服务端配合。",
+  "fields": [],
+  "formatVersion": 1,
+  "version": "1.0.0",
+  "author": "本地模组库",
+  "operations": [],
+  "dependencies": []
+}

@@ -1,0 +1,13 @@
+{
+  "authorVersion": "BF4 LAN BOT ALPHA v0.2 (2026-11-07)",
+  "runtimeVersion": "v2-1107",
+  "files": {
+    "bf4_Server_Final.exe": "160ec988aad0632946936a21a9aed1c73f5b906161f2d96b2a085ee65ce183ba",
+    "BF4BlazeServer.exe": "bb24fed047651e97cc6a51f1757d7fce81ce2dec24b188fd2c7a45c89ee680c0",
+    "dinput8.dll": "b96f7bd37a4b62090e13c3a13cda5b2b213deabfc16f4c49c8c5da7d535e0428",
+    "xinput9_1_0.dll": "81c6dfcd7bcb4f2b2580a98c8e66a3eb624b44f48b80f42a1f8134e448171cc9",
+    "Engine.BuildInfo_Win64_final_Server.dll": "83287c687c8240e1ba9dc0f1985a2cf76dc6b42187606251dd70f8bb5e413b4e",
+    "GBClient.dll": "0943b55e97810729aa35f13cd5f90fb988d8c47abb3cbd6355aa4af0971bcca4",
+    "navigation.bf4pack": "d5dc2b36dbaa0b9ade51cd5b717b5af94ef02129d0753f4db55ba08090da4933"
+  }
+}

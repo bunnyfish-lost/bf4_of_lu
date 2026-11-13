@@ -1,0 +1,31 @@
+{
+  "formatVersion": 1,
+  "id": "invincible",
+  "name": "无敌",
+  "version": "1.0.0",
+  "author": "本地模组库",
+  "side": "both",
+  "kind": "runtime",
+  "adapter": "external",
+  "description": "独立控制本机存活角色的无敌效果，需要本实例服务端配合，不改变一击必杀开关。",
+  "dependencies": [],
+  "operations": [],
+  "fields": [],
+  "runtime": {
+    "apiVersion": 1,
+    "type": "node",
+    "entryPoint": "entry.mjs",
+    "group": "bf4.invincible",
+    "startWhen": "client",
+    "arguments": [
+      "--context",
+      "{context}"
+    ]
+  },
+  "tool": {
+    "id": "invincible",
+    "title": "无敌",
+    "fields": [],
+    "actions": []
+  }
+}

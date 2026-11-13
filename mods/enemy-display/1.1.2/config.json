@@ -1,0 +1,6 @@
+{
+  "boxes": true,
+  "lines": true,
+  "distance": 100,
+  "excludeHumans": true
+}

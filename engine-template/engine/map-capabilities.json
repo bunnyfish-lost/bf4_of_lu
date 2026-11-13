@@ -1,0 +1,245 @@
+[
+  {
+    "id": "XP0_Metro",
+    "label": "地铁行动 2014",
+    "modes": [
+      "ConquestLarge0",
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "MP_Abandoned",
+    "label": "废弃工厂",
+    "modes": [
+      "ConquestLarge0",
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "MP_Resort",
+    "label": "海南度假村",
+    "modes": [
+      "ConquestLarge0",
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "MP_Siege",
+    "label": "上海之围",
+    "modes": [
+      "ConquestLarge0",
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP5_Night_01",
+    "label": "废弃工厂：夜战",
+    "modes": [
+      "ConquestLarge0",
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP3_Prpganda",
+    "label": "政宣口号",
+    "modes": [
+      "ConquestLarge0",
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "MP_Prison",
+    "label": "极地监狱",
+    "modes": [
+      "ConquestLarge0",
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP3_MarketPl",
+    "label": "虹桥市场",
+    "modes": [
+      "ConquestLarge0",
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "MP_Tremors",
+    "label": "破晓行动",
+    "modes": [
+      "ConquestLarge0",
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP1_003",
+    "label": "桂林群山",
+    "modes": [
+      "ConquestLarge0",
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "MP_TheDish",
+    "label": "广播中心",
+    "modes": [
+      "ConquestLarge0",
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "MP_Naval",
+    "label": "西沙风暴",
+    "modes": [
+      "ConquestLarge0",
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP3_WtrFront",
+    "label": "沈龍河畔",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP2_004",
+    "label": "追擊任務",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP4_SubBase",
+    "label": "双髻鲨基地",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP4_Titan",
+    "label": "21号机库",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP2_002",
+    "label": "南沙之袭",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP3_UrbanGdn",
+    "label": "隆披尼花园",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP2_003",
+    "label": "消波礁岸",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP4_WlkrFtry",
+    "label": "卡雷利亚巨人",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP1_002",
+    "label": "阿尔泰山",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP7_Valley",
+    "label": "龙之谷2015",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "MP_Damage",
+    "label": "水坝风云",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP6_CMP",
+    "label": "叢林行動",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP1_004",
+    "label": "龙隘之战",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP4_Arctic",
+    "label": "雪盲行动",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP0_Firestorm",
+    "label": "火線風暴行動2014",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP0_Caspian",
+    "label": "裏海邊境2014",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP2_001",
+    "label": "失落岛屿",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP0_Oman",
+    "label": "阿曼湾2014",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "MP_Flooded",
+    "label": "水乡泽国",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "MP_Journey",
+    "label": "荒野游踪",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  },
+  {
+    "id": "XP1_001",
+    "label": "丝绸之路",
+    "modes": [
+      "AirSuperiority0"
+    ]
+  }
+]

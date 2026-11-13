@@ -1,0 +1,58 @@
+{
+  "formatVersion": 1,
+  "id": "enemy-display",
+  "name": "敌人位置显示",
+  "version": "1.2.0",
+  "author": "本地模组库",
+  "side": "client",
+  "kind": "runtime",
+  "adapter": "external",
+  "description": "v2（1107）独立运行组件。在游戏画面上绘制敌方步兵方框与指示线；0 为不限距离。标记窗保持置顶并穿透鼠标，不影响游戏点击、滚轮和拖动。",
+  "dependencies": [],
+  "operations": [],
+  "fields": [
+    {
+      "id": "boxes",
+      "label": "显示方框",
+      "type": "boolean",
+      "defaultValue": true
+    },
+    {
+      "id": "lines",
+      "label": "显示指示线",
+      "type": "boolean",
+      "defaultValue": true
+    },
+    {
+      "id": "distance",
+      "label": "显示距离（0不限距离，其他10～300米）",
+      "type": "number",
+      "defaultValue": 100,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "id": "excludeHumans",
+      "label": "只显示人机",
+      "type": "boolean",
+      "defaultValue": true
+    }
+  ],
+  "runtime": {
+    "apiVersion": 1,
+    "type": "node",
+    "entryPoint": "entry.mjs",
+    "group": "bf4.enemy-display",
+    "startWhen": "client",
+    "arguments": [
+      "--context",
+      "{context}"
+    ]
+  },
+  "tool": {
+    "id": "enemy-display",
+    "title": "敌人位置显示",
+    "fields": [],
+    "actions": []
+  }
+}

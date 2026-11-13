@@ -1,0 +1,75 @@
+[
+  {
+    "id": "no-spread",
+    "name": "无散布",
+    "side": "client",
+    "description": "消除子弹的随机散布，让弹着更集中。枪口后座、子弹下坠和速度分别控制。",
+    "fields": [
+      {
+        "id": "noSpread",
+        "label": "消除随机散布",
+        "type": "boolean",
+        "defaultValue": true,
+        "hint": "只控制散布；不会同时开启无后座或修改弹道。"
+      }
+    ],
+    "formatVersion": 1,
+    "version": "1.0.0",
+    "kind": "runtime",
+    "adapter": "player-effects",
+    "author": "本地模组库",
+    "operations": [],
+    "dependencies": []
+  },
+  {
+    "id": "no-recoil",
+    "name": "无后座",
+    "side": "client",
+    "description": "清除枪械后座参数，减少开火时的枪口上跳。不会同时修改随机散布、下坠或速度。",
+    "fields": [
+      {
+        "id": "noRecoil",
+        "label": "消除开火后座",
+        "type": "boolean",
+        "defaultValue": true,
+        "hint": "与无散布独立，可按需要组合启用。"
+      }
+    ],
+    "formatVersion": 1,
+    "version": "1.0.0",
+    "kind": "runtime",
+    "adapter": "player-effects",
+    "author": "本地模组库",
+    "operations": [],
+    "dependencies": []
+  },
+  {
+    "id": "ballistics",
+    "name": "弹道调整",
+    "side": "client",
+    "description": "分别调整子弹重力下坠和飞行速度。不会改变枪口后座或随机散布。",
+    "fields": [
+      {
+        "id": "noBulletDrop",
+        "label": "子弹无下坠",
+        "type": "boolean",
+        "defaultValue": true,
+        "hint": "移除普通枪弹的重力下坠，不代表子弹没有随机散布。"
+      },
+      {
+        "id": "fastBullets",
+        "label": "高速子弹",
+        "type": "boolean",
+        "defaultValue": false,
+        "hint": "提高普通枪弹速度，与无下坠开关独立。"
+      }
+    ],
+    "formatVersion": 1,
+    "version": "1.0.0",
+    "kind": "runtime",
+    "adapter": "player-effects",
+    "author": "本地模组库",
+    "operations": [],
+    "dependencies": []
+  }
+]

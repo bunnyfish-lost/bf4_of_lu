@@ -1,0 +1,7 @@
+{
+  "mode": "body",
+  "trigger": "ads",
+  "radius": 12,
+  "strength": 55,
+  "excludeHumans": true
+}

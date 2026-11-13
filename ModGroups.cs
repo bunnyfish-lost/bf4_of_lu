@@ -1,0 +1,38 @@
+﻿using System;using System.Collections.Generic;using System.Collections.ObjectModel;using System.IO;using System.Linq;using System.Text.Json;using System.Text.Json.Nodes;
+namespace BF4Launcher;
+public sealed class ModGroupState {public string Id{get;set;}="";public string SelectedVersion{get;set;}="";public bool Enabled{get;set;}}
+public static class ModSelectionPolicy {
+ public static IReadOnlyList<ModItem> Apply(LauncherConfig config){
+  var byId=config.Mods.GroupBy(m=>m.Manifest.Id).ToDictionary(g=>g.Key,g=>g.ToList(),StringComparer.Ordinal);var states=config.ModGroups??=new();var valid=new List<ModGroupState>();var seen=new HashSet<string>(StringComparer.Ordinal);
+  foreach(var state in states){if(!seen.Add(state.Id)||!byId.TryGetValue(state.Id,out var versions))continue;if(!versions.Any(m=>m.Version==state.SelectedVersion)){state.SelectedVersion=versions[0].Version;state.Enabled=false;}valid.Add(state);}
+  var missing=byId.Where(p=>!seen.Contains(p.Key)).Select(p=>{var active=p.Value.LastOrDefault(m=>m.Enabled);var chosen=active??p.Value[0];return (index:config.Mods.IndexOf(active??p.Value[0]),state:new ModGroupState{Id=p.Key,SelectedVersion=chosen.Version,Enabled=active!=null});}).OrderBy(p=>p.index);
+  foreach(var entry in missing){int at=valid.FindIndex(g=>{var chosen=byId[g.Id].First(m=>m.Version==g.SelectedVersion);return config.Mods.IndexOf(chosen)>entry.index;});if(at<0)valid.Add(entry.state);else valid.Insert(at,entry.state);}config.ModGroups=valid;
+  var ordered=new List<ModItem>();var cards=new List<ModItem>();foreach(var state in valid){var versions=byId[state.Id];var selected=versions.Single(m=>m.Version==state.SelectedVersion);foreach(var mod in versions){mod.Enabled=state.Enabled&&ReferenceEquals(mod,selected);mod.VersionCount=versions.Count(m=>m.HasFiles);ordered.Add(mod);}cards.Add(selected);}
+  if(!config.Mods.SequenceEqual(ordered)){config.Mods.Clear();foreach(var m in ordered)config.Mods.Add(m);}return cards;
+ }
+}
+public partial class Repository {
+ readonly Dictionary<string,JsonNode?> versionBaselines=new(StringComparer.Ordinal);readonly Dictionary<string,string?> versionFileText=new(StringComparer.Ordinal);
+ public IReadOnlyList<ModItem> ModCards=>ModSelectionPolicy.Apply(Config).Where(m=>m.HasFiles).ToList();
+ public IReadOnlyList<ModItem> VersionsOf(string id)=>Config.Mods.Where(m=>m.Manifest.Id==id&&m.HasFiles).ToList();
+ void AdoptDirectModEdits(){if(Config.ModGroups==null)return;foreach(var group in Config.ModGroups){var versions=VersionsOf(group.Id);var selected=versions.FirstOrDefault(m=>m.Version==group.SelectedVersion);if(selected==null)continue;var other=versions.LastOrDefault(m=>m.Enabled&&m!=selected);if(other!=null){group.SelectedVersion=other.Version;group.Enabled=true;}else if(selected.Enabled!=group.Enabled)group.Enabled=selected.Enabled;}}
+ void PrepareModGroupMigration(){if(Config.SchemaVersion>=2)return;var dir=Path.Combine(Root,"data","migrations");Directory.CreateDirectory(dir);if(File.Exists(ConfigPath)){var target=Path.Combine(dir,"config-before-mod-groups-"+DateTime.Now.ToString("yyyyMMdd-HHmmss")+"-"+Guid.NewGuid().ToString("N")[..6]+".json");File.Copy(ConfigPath,target);}Config.SchemaVersion=2;}
+ public void SetModEnabled(string id,bool enabled){ModSelectionPolicy.Apply(Config);var group=Config.ModGroups!.Single(g=>g.Id==id);group.Enabled=enabled;ModSelectionPolicy.Apply(Config);Save();}
+ public ModItem SelectModVersion(string id,string version){ModSelectionPolicy.Apply(Config);var item=VersionsOf(id).SingleOrDefault(m=>m.Version==version)??throw new Exception("该模组版本不存在。");var group=Config.ModGroups!.Single(g=>g.Id==id);group.SelectedVersion=version;ModSelectionPolicy.Apply(Config);Save();return item;}
+ public void MoveMod(string id,int index){ModSelectionPolicy.Apply(Config);var groups=Config.ModGroups!;var group=groups.Single(g=>g.Id==id);groups.Remove(group);groups.Insert(Math.Clamp(index,0,groups.Count),group);ModSelectionPolicy.Apply(Config);Save();}
+ public void SaveModVersion(ModItem item){Validate(item.Config,item.Manifest.Fields);Save();}
+ string VersionDirectory(ModItem item){var expected=Path.GetFullPath(Path.Combine(Root,"mods",item.Manifest.Id,item.Version));var actual=Path.GetFullPath(Path.Combine(Root,item.Directory));if(!string.Equals(actual,expected,StringComparison.OrdinalIgnoreCase))throw new Exception("模组版本目录应为 mods/模组ID/版本号。");var parent=Path.GetFullPath(Path.Combine(Root,"mods"))+Path.DirectorySeparatorChar;if(!actual.StartsWith(parent,StringComparison.OrdinalIgnoreCase))throw new Exception("模组版本目录不正确。");return actual;}
+ static JsonNode? Snapshot(Dictionary<string,JsonNode?> config)=>JsonSerializer.SerializeToNode(config,Json);
+ void RememberVersion(ModItem item,string? text=null){versionBaselines[item.Key]=Snapshot(item.Config);versionFileText[item.Key]=text;}
+ void SaveVersionConfigs(){foreach(var item in Config.Mods){if(!item.HasFiles||invalidExternalConfigs.Contains(item.Key))continue;string dir=VersionDirectory(item);if(!Directory.Exists(dir))continue;string file=Path.Combine(dir,"config.json");string? disk=File.Exists(file)?RuntimeFileIdentity.ReadShared(file):null;
+   bool known=versionBaselines.TryGetValue(item.Key,out var baseline),dirty=known&&!JsonNode.DeepEquals(baseline,Snapshot(item.Config));
+   if(disk!=null&&(!known||(!dirty&&versionFileText.GetValueOrDefault(item.Key)!=disk))){var values=JsonSerializer.Deserialize<Dictionary<string,JsonNode?>>(disk,Json)??throw new Exception(item.Name+" 的版本配置为空。");Validate(values,item.Manifest.Fields);item.Config=values;RememberVersion(item,disk);continue;}
+   if(dirty&&disk!=versionFileText.GetValueOrDefault(item.Key))throw new Exception(item.Name+" "+item.Version+" 的配置已在外部修改，请刷新后再保存。");
+   if(disk==null||dirty){Validate(item.Config,item.Manifest.Fields);var text=JsonSerializer.Serialize(item.Config,Json);Atomic(file,text);RememberVersion(item,text);}else if(!known)RememberVersion(item,disk);
+  }}
+ public void RemoveModGroup(string id){var versions=VersionsOf(id).ToList();foreach(var item in versions)ValidateVersionRemoval(item);foreach(var item in versions)RemoveVersionFiles(item);Config.ModGroups?.RemoveAll(g=>g.Id==id);Save();}
+ void ValidateVersionRemoval(ModItem item){string source=VersionDirectory(item);for(var d=new DirectoryInfo(source);d!=null&&d.FullName.Length>=Path.Combine(Root,"mods").Length;d=d.Parent)if(d.Exists&&(d.Attributes&FileAttributes.ReparsePoint)!=0)throw new Exception("模组版本目录不能是链接。");}
+ void RemoveVersionFiles(ModItem item){ValidateVersionRemoval(item);string source=VersionDirectory(item);
+  if(Directory.Exists(source)){var archive=Path.GetFullPath(Path.Combine(Root,"data","removed-mods",DateTime.Now.ToString("yyyyMMdd-HHmmss")+"-"+Guid.NewGuid().ToString("N")[..6]));var allowed=Path.GetFullPath(Path.Combine(Root,"data","removed-mods"))+Path.DirectorySeparatorChar;if(!archive.StartsWith(allowed,StringComparison.OrdinalIgnoreCase))throw new Exception("移除记录目录不正确。");Directory.CreateDirectory(archive);Directory.Move(source,Path.Combine(archive,"files"));Atomic(Path.Combine(archive,"config.json"),JsonSerializer.Serialize(item,Json));}Config.Mods.Remove(item);versionBaselines.Remove(item.Key);versionFileText.Remove(item.Key);}
+ public void RemoveModVersion(ModItem item){ModSelectionPolicy.Apply(Config);var group=Config.ModGroups!.Single(g=>g.Id==item.Manifest.Id);bool chosen=group.SelectedVersion==item.Version;RemoveVersionFiles(item);var remaining=VersionsOf(group.Id);if(remaining.Count==0)Config.ModGroups!.Remove(group);else if(chosen){group.SelectedVersion=remaining[0].Version;group.Enabled=false;}ModSelectionPolicy.Apply(Config);Save();}
+}

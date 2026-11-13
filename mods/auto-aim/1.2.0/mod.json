@@ -1,0 +1,86 @@
+{
+  "formatVersion": 1,
+  "id": "auto-aim",
+  "name": "自动瞄准",
+  "version": "1.2.0",
+  "author": "本地模组库",
+  "side": "client",
+  "kind": "runtime",
+  "adapter": "external",
+  "description": "v2（1107）独立运行组件。独立的本机自动瞄准，选择部位、按键、范围与过渡速度；F8暂停/恢复，F9切换部位。",
+  "dependencies": [],
+  "operations": [],
+  "fields": [
+    {
+      "id": "mode",
+      "label": "瞄准部位",
+      "type": "select",
+      "defaultValue": "body",
+      "options": [
+        {
+          "label": "身体",
+          "value": "body"
+        },
+        {
+          "label": "头部",
+          "value": "head"
+        }
+      ]
+    },
+    {
+      "id": "trigger",
+      "label": "触发按键",
+      "type": "select",
+      "defaultValue": "ads",
+      "options": [
+        {
+          "label": "右键瞄准",
+          "value": "ads"
+        },
+        {
+          "label": "左键开火",
+          "value": "fire"
+        }
+      ]
+    },
+    {
+      "id": "radius",
+      "label": "瞄准范围（90为全视野）",
+      "type": "number",
+      "defaultValue": 12,
+      "min": 2,
+      "max": 90
+    },
+    {
+      "id": "strength",
+      "label": "过渡速度（100为即时）",
+      "type": "number",
+      "defaultValue": 55,
+      "min": 5,
+      "max": 100
+    },
+    {
+      "id": "excludeHumans",
+      "label": "只作用于人机",
+      "type": "boolean",
+      "defaultValue": true
+    }
+  ],
+  "runtime": {
+    "apiVersion": 1,
+    "type": "node",
+    "entryPoint": "entry.mjs",
+    "group": "bf4.auto-aim",
+    "startWhen": "client",
+    "arguments": [
+      "--context",
+      "{context}"
+    ]
+  },
+  "tool": {
+    "id": "auto-aim",
+    "title": "自动瞄准",
+    "fields": [],
+    "actions": []
+  }
+}

@@ -1,0 +1,10 @@
+# Preserve exact bytes: module checksums include scripts, manifests and sources.
+# -text disables automatic line-ending conversion but keeps ordinary text diffs.
+* -text
+*.exe binary
+*.dll binary
+*.png binary
+*.jpg binary
+*.wav binary
+*.mp3 binary
+*.zip binary

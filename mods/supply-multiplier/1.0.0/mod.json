@@ -1,0 +1,46 @@
+{
+  "formatVersion": 1,
+  "id": "supply-multiplier",
+  "name": "补给倍率",
+  "version": "1.0.0",
+  "author": "本地模组库",
+  "side": "server",
+  "kind": "runtime",
+  "adapter": "external",
+  "description": "独立服务端模组。分别调整医疗回血与弹药补给倍率，范围 1～10 倍，默认 1 倍。执行程序和补给逻辑均在本模组目录。",
+  "dependencies": [],
+  "operations": [],
+  "fields": [
+    {
+      "id": "healingMultiplier",
+      "label": "医疗回血速度倍率",
+      "type": "number",
+      "min": 1,
+      "max": 10,
+      "unit": "倍",
+      "defaultValue": 1,
+      "hint": "提高医疗包与小急救包的回血速度；小急救包总回血量、血量上限和受伤中断规则不变。"
+    },
+    {
+      "id": "ammoMultiplier",
+      "label": "弹药补给倍率",
+      "type": "number",
+      "min": 1,
+      "max": 10,
+      "unit": "倍",
+      "defaultValue": 1,
+      "hint": "放大弹药包的持续补给速度、单次补给量和对应补给容量；不改变弹匣容量。"
+    }
+  ],
+  "runtime": {
+    "apiVersion": 1,
+    "type": "executable",
+    "entryPoint": "bin/BF4SupplyMod.exe",
+    "group": "bf4.supply",
+    "startWhen": "server",
+    "arguments": [
+      "--context",
+      "{context}"
+    ]
+  }
+}

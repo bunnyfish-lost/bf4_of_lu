@@ -1,0 +1,499 @@
+[
+  {
+    "id": "serverPreset",
+    "label": "服务端规则预设",
+    "group": "服务端预设",
+    "source": "virtual",
+    "type": "select",
+    "options": [
+      {
+        "value": "CUSTOM",
+        "label": "自定义（CUSTOM）"
+      },
+      {
+        "value": "NORMAL",
+        "label": "普通（NORMAL）"
+      },
+      {
+        "value": "HARDCORE",
+        "label": "硬核（HARDCORE）"
+      }
+    ],
+    "defaultValue": "CUSTOM",
+    "hint": "普通／硬核使用游戏预设规则；自定义使用下方细项设置。保存后重启游戏服生效。"
+  },
+  {
+    "id": "serverName",
+    "label": "服务器名称",
+    "group": "连接与人数",
+    "source": "settings",
+    "key": "serverName",
+    "type": "text",
+    "maxLength": 60,
+    "defaultValue": "BF4 LOCAL BOTS"
+  },
+  {
+    "id": "advertiseAddress",
+    "label": "主机 IPv4",
+    "group": "连接与人数",
+    "source": "settings",
+    "key": "advertiseAddress",
+    "type": "ipv4",
+    "hint": "仅本机游玩填 127.0.0.1；联机填主机组网网卡或局域网 IP。修改后需重启全部服务。",
+    "defaultValue": "127.0.0.1"
+  },
+  {
+    "id": "gamePort",
+    "label": "游戏端口 UDP",
+    "group": "连接与人数",
+    "source": "settings",
+    "key": "gamePort",
+    "type": "number",
+    "min": 1024,
+    "max": 65535,
+    "unit": "",
+    "defaultValue": 25205
+  },
+  {
+    "id": "rconPort",
+    "label": "管理端口 TCP",
+    "group": "连接与人数",
+    "source": "settings",
+    "key": "rconPort",
+    "type": "number",
+    "min": 1024,
+    "max": 65535,
+    "unit": "",
+    "defaultValue": 25210
+  },
+  {
+    "id": "maxPlayers",
+    "label": "对战人数上限",
+    "group": "连接与人数",
+    "source": "startup",
+    "key": "vars.maxPlayers",
+    "type": "number",
+    "min": 64,
+    "max": 64,
+    "unit": "",
+    "locked": true,
+    "hint": "固定为 64 人，暂时不支持调整。",
+    "defaultValue": 64
+  },
+  {
+    "id": "initialBots",
+    "label": "开服 Bot 数量",
+    "group": "连接与人数",
+    "source": "settings",
+    "key": "initialBots",
+    "type": "number",
+    "min": 0,
+    "max": 63,
+    "unit": "",
+    "defaultValue": 31
+  },
+  {
+    "id": "maxSpectators",
+    "label": "观战席位",
+    "group": "连接与人数",
+    "source": "startup",
+    "key": "vars.maxSpectators",
+    "type": "number",
+    "min": 0,
+    "max": 4,
+    "unit": "",
+    "defaultValue": 4
+  },
+  {
+    "id": "startPlayers",
+    "label": "开局人数阈值",
+    "group": "连接与人数",
+    "source": "startup",
+    "key": "vars.roundStartPlayerCount",
+    "type": "number",
+    "min": 0,
+    "max": 64,
+    "unit": "",
+    "defaultValue": 0
+  },
+  {
+    "id": "skipPreround",
+    "label": "跳过预备阶段",
+    "group": "连接与人数",
+    "source": "engine",
+    "key": "-Game.DisablePreRound",
+    "type": "boolean",
+    "defaultValue": true
+  },
+  {
+    "id": "tickRate",
+    "label": "服务器刷新率",
+    "group": "连接与人数",
+    "source": "engine",
+    "key": "-MaxTickRate",
+    "type": "select",
+    "options": [
+      {
+        "value": 30,
+        "label": "30 Hz（默认）"
+      },
+      {
+        "value": 60,
+        "label": "60 Hz"
+      }
+    ],
+    "defaultValue": 30,
+    "hint": "保存并重启后生效。60 Hz 会增加主机 CPU 和网络负载。"
+  },
+  {
+    "id": "team1Faction",
+    "label": "队伍 1 阵营",
+    "group": "阵营",
+    "source": "startup",
+    "key": "vars.teamFactionOverride 1",
+    "type": "select",
+    "options": [
+      {
+        "value": 0,
+        "label": "美国"
+      },
+      {
+        "value": 1,
+        "label": "俄罗斯"
+      },
+      {
+        "value": 2,
+        "label": "中国"
+      }
+    ],
+    "defaultValue": 0,
+    "hint": "保存并重启后生效。"
+  },
+  {
+    "id": "team2Faction",
+    "label": "队伍 2 阵营",
+    "group": "阵营",
+    "source": "startup",
+    "key": "vars.teamFactionOverride 2",
+    "type": "select",
+    "options": [
+      {
+        "value": 0,
+        "label": "美国"
+      },
+      {
+        "value": 1,
+        "label": "俄罗斯"
+      },
+      {
+        "value": 2,
+        "label": "中国"
+      }
+    ],
+    "defaultValue": 2,
+    "hint": "保存并重启后生效。"
+  },
+  {
+    "id": "tickets",
+    "label": "兵力值倍率",
+    "group": "对局规则",
+    "source": "startup",
+    "key": "vars.gameModeCounter",
+    "type": "number",
+    "min": 1,
+    "max": 500,
+    "unit": "%",
+    "hint": "100% 为默认值；保存并重启后，可在下方核对实际生效值。",
+    "defaultValue": 200
+  },
+  {
+    "id": "roundTime",
+    "label": "回合时间倍率",
+    "group": "对局规则",
+    "source": "startup",
+    "key": "vars.roundTimeLimit",
+    "type": "number",
+    "min": 0,
+    "max": 900,
+    "unit": "%",
+    "hint": "100% 为默认值；保存并重启后，可在下方核对实际生效值。",
+    "defaultValue": 200
+  },
+  {
+    "id": "health",
+    "label": "士兵血量倍率",
+    "group": "对局规则",
+    "source": "startup",
+    "key": "vars.soldierHealth",
+    "type": "number",
+    "min": 1,
+    "max": 300,
+    "unit": "%",
+    "hint": "100% 为默认值；保存并重启后，可在下方核对实际生效值。",
+    "defaultValue": 100
+  },
+  {
+    "id": "damage",
+    "label": "全局子弹伤害",
+    "group": "对局规则",
+    "source": "startup",
+    "key": "vars.bulletDamage",
+    "type": "number",
+    "min": 1,
+    "max": 300,
+    "unit": "%",
+    "hint": "100% 为默认值；保存并重启后，可在下方核对实际生效值。",
+    "defaultValue": 100
+  },
+  {
+    "id": "respawn",
+    "label": "玩家重生时间倍率",
+    "group": "对局规则",
+    "source": "startup",
+    "key": "vars.playerRespawnTime",
+    "type": "number",
+    "min": 1,
+    "max": 300,
+    "unit": "%",
+    "hint": "100% 为默认值；保存并重启后，可在下方核对实际生效值。",
+    "defaultValue": 100
+  },
+  {
+    "id": "vehicleDelay",
+    "label": "载具重生时间倍率",
+    "group": "对局规则",
+    "source": "startup",
+    "key": "vars.vehicleSpawnDelay",
+    "type": "number",
+    "min": 1,
+    "max": 500,
+    "unit": "%",
+    "hint": "100% 为默认值；保存并重启后，可在下方核对实际生效值。",
+    "defaultValue": 35
+  },
+  {
+    "id": "friendlyFire",
+    "label": "友军伤害",
+    "group": "对局规则",
+    "source": "startup",
+    "key": "vars.friendlyFire",
+    "type": "boolean",
+    "defaultValue": false
+  },
+  {
+    "id": "teamKillBan",
+    "label": "友军击杀封禁",
+    "group": "对局规则",
+    "source": "engine",
+    "key": "-PointSystem.IgnoreTeamKill",
+    "type": "boolean",
+    "inverted": true,
+    "defaultValue": false,
+    "hint": "开启后：累计击杀 5 名队友踢出，因误杀被踢 3 次封禁。关闭后不因误杀自动踢出或封禁，仍保留友军伤害。保存并重启后生效；已有封禁需另行解除。"
+  },
+  {
+    "id": "infiniteMags",
+    "label": "旧版无限备弹",
+    "group": "无限火力",
+    "source": "engine",
+    "key": "-Game.HasUnlimitedMags",
+    "type": "boolean",
+    "defaultValue": false,
+    "hidden": true
+  },
+  {
+    "id": "infiniteAmmo",
+    "label": "无限火力（免换弹）",
+    "group": "弹药",
+    "source": "engine",
+    "key": "-Game.HasUnlimitedAmmo",
+    "type": "boolean",
+    "defaultValue": false,
+    "hidden": true
+  },
+  {
+    "id": "ammoMode",
+    "label": "弹药模式",
+    "group": "弹药",
+    "source": "virtual",
+    "type": "select",
+    "options": [
+      {
+        "value": 0,
+        "label": "普通弹药（默认）"
+      },
+      {
+        "value": 1,
+        "label": "无限备弹（需要换弹）"
+      },
+      {
+        "value": 2,
+        "label": "无限火力（免换弹）"
+      }
+    ],
+    "defaultValue": 0,
+    "hint": "全服生效，保存并重启后应用。无限备弹仍需换弹；该模式的满员人机表现待 beta 实测。Bot 独立备弹设置不受影响。"
+  },
+  {
+    "id": "regen",
+    "label": "自动回血",
+    "group": "对局规则",
+    "source": "startup",
+    "key": "vars.regenerateHealth",
+    "type": "boolean",
+    "defaultValue": true
+  },
+  {
+    "id": "vehicles",
+    "label": "生成载具",
+    "group": "对局规则",
+    "source": "startup",
+    "key": "vars.vehicleSpawnAllowed",
+    "type": "boolean",
+    "defaultValue": true
+  },
+  {
+    "id": "autoBalance",
+    "label": "自动平衡队伍",
+    "group": "对局规则",
+    "source": "startup",
+    "key": "vars.autoBalance",
+    "type": "boolean",
+    "defaultValue": true
+  },
+  {
+    "id": "commander",
+    "label": "允许指挥官",
+    "group": "对局规则",
+    "source": "startup",
+    "key": "vars.commander",
+    "type": "boolean",
+    "defaultValue": true
+  },
+  {
+    "id": "killCam",
+    "label": "击杀镜头",
+    "group": "显示与解锁",
+    "source": "startup",
+    "key": "vars.killCam",
+    "type": "boolean",
+    "defaultValue": true
+  },
+  {
+    "id": "miniMap",
+    "label": "小地图",
+    "group": "显示与解锁",
+    "source": "startup",
+    "key": "vars.miniMap",
+    "type": "boolean",
+    "defaultValue": true
+  },
+  {
+    "id": "hud",
+    "label": "HUD",
+    "group": "显示与解锁",
+    "source": "startup",
+    "key": "vars.hud",
+    "type": "boolean",
+    "defaultValue": true
+  },
+  {
+    "id": "spotting",
+    "label": "3D 标记",
+    "group": "显示与解锁",
+    "source": "startup",
+    "key": "vars.3dSpotting",
+    "type": "boolean",
+    "defaultValue": true
+  },
+  {
+    "id": "allUnlocks",
+    "label": "武器全解",
+    "group": "显示与解锁",
+    "source": "engine",
+    "key": "-SyncedBFSettings.AllUnlocksUnlocked",
+    "type": "boolean",
+    "defaultValue": true,
+    "hint": "开启后在本服务器开放武器与配件；关闭后按玩家档案解锁。保存并重启游戏服生效，不改变等级和经验。"
+  },
+  {
+    "id": "botVehicles",
+    "label": "人机使用载具",
+    "group": "Bot 基础开关",
+    "source": "bot",
+    "key": "VehicleBots",
+    "type": "boolean",
+    "hint": "关闭后人机以步兵部署，不选择载具；真人仍可使用。保存并重启后生效。",
+    "defaultValue": true
+  },
+  {
+    "id": "botRevive",
+    "label": "Bot 医疗兵救援",
+    "group": "Bot 基础开关",
+    "source": "bot",
+    "key": "BotMedicRevive",
+    "type": "boolean",
+    "defaultValue": true
+  },
+  {
+    "id": "botReserve",
+    "label": "Bot 无限备弹（保留换弹）",
+    "group": "Bot 基础开关",
+    "source": "bot",
+    "key": "BotInfiniteReserve",
+    "type": "boolean",
+    "defaultValue": true
+  },
+  {
+    "id": "botGrenades",
+    "label": "Bot 无限手雷",
+    "group": "Bot 基础开关",
+    "source": "bot",
+    "key": "BotInfiniteGrenades",
+    "type": "boolean",
+    "defaultValue": true
+  },
+  {
+    "id": "botChat",
+    "label": "Bot 对局聊天",
+    "group": "Bot 基础开关",
+    "source": "bot",
+    "key": "BotMatchChat",
+    "type": "boolean",
+    "defaultValue": true
+  },
+  {
+    "id": "botRoundChat",
+    "label": "Bot 回合结束聊天",
+    "group": "Bot 基础开关",
+    "source": "bot",
+    "key": "BotRoundChat",
+    "type": "boolean",
+    "defaultValue": true
+  },
+  {
+    "id": "botRandomRank",
+    "label": "人机随机等级",
+    "group": "Bot 基础开关",
+    "type": "boolean",
+    "defaultValue": true,
+    "hint": "随机显示人机等级，不改变真人档案。"
+  },
+  {
+    "id": "externalIp",
+    "label": "上报地址（留空自动）",
+    "group": "高级连接",
+    "type": "ipv4optional",
+    "defaultValue": "",
+    "hint": "本机离线保留空白。"
+  },
+  {
+    "id": "externalPort",
+    "label": "上报端口（0自动）",
+    "group": "高级连接",
+    "type": "number",
+    "min": 0,
+    "max": 65535,
+    "defaultValue": 0
+  }
+]

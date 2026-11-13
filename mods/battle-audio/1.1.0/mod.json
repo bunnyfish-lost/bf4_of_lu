@@ -1,0 +1,261 @@
+{
+  "formatVersion": 1,
+  "id": "battle-audio",
+  "name": "战斗音效",
+  "version": "1.1.0",
+  "author": "本地模组库",
+  "side": "local",
+  "kind": "runtime",
+  "adapter": "external",
+  "description": "本机击杀、爆头、连杀与死亡音效，独立音量，支持直接试听和自定义音频；试听与导入无需启用模组或启动服务端。",
+  "dependencies": [],
+  "operations": [],
+  "fields": [
+    {
+      "id": "killEnabled",
+      "label": "击杀音效",
+      "type": "boolean",
+      "defaultValue": true
+    },
+    {
+      "id": "killPack",
+      "label": "击杀音效包",
+      "type": "select",
+      "defaultValue": "test",
+      "options": [
+        {
+          "label": "简洁提示音",
+          "value": "test"
+        },
+        {
+          "label": "战地1",
+          "value": "bf1"
+        },
+        {
+          "label": "战地5",
+          "value": "bfv"
+        },
+        {
+          "label": "穿越火线",
+          "value": "cf"
+        },
+        {
+          "label": "自定义",
+          "value": "custom"
+        }
+      ]
+    },
+    {
+      "id": "killVolume",
+      "label": "击杀音量",
+      "type": "number",
+      "defaultValue": 70,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "id": "streakEnabled",
+      "label": "连杀提示",
+      "type": "boolean",
+      "defaultValue": true
+    },
+    {
+      "id": "deathEnabled",
+      "label": "死亡音效",
+      "type": "boolean",
+      "defaultValue": false
+    },
+    {
+      "id": "deathPack",
+      "label": "死亡音效包",
+      "type": "select",
+      "defaultValue": "peace1",
+      "options": [
+        {
+          "label": "死亡提示1",
+          "value": "peace1"
+        },
+        {
+          "label": "死亡提示2",
+          "value": "peace2"
+        },
+        {
+          "label": "自定义",
+          "value": "custom"
+        }
+      ]
+    },
+    {
+      "id": "deathVolume",
+      "label": "死亡音量",
+      "type": "number",
+      "defaultValue": 30,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "id": "playerName",
+      "label": "玩家ID（留空跟随启动器）",
+      "type": "text",
+      "defaultValue": ""
+    }
+  ],
+  "runtime": {
+    "apiVersion": 1,
+    "type": "node",
+    "entryPoint": "entry.mjs",
+    "group": "bf4.battle-audio",
+    "startWhen": "server",
+    "arguments": [
+      "--context",
+      "{context}"
+    ]
+  },
+  "tool": {
+    "id": "battle-audio",
+    "title": "战斗音效",
+    "fields": [
+      {
+        "id": "killPack",
+        "label": "击杀音效包",
+        "type": "select",
+        "defaultValue": "test",
+        "options": [
+          {
+            "label": "简洁提示音",
+            "value": "test"
+          },
+          {
+            "label": "战地1",
+            "value": "bf1"
+          },
+          {
+            "label": "战地5",
+            "value": "bfv"
+          },
+          {
+            "label": "穿越火线",
+            "value": "cf"
+          },
+          {
+            "label": "自定义",
+            "value": "custom"
+          }
+        ]
+      },
+      {
+        "id": "deathPack",
+        "label": "死亡音效包",
+        "type": "select",
+        "defaultValue": "peace1",
+        "options": [
+          {
+            "label": "死亡提示1",
+            "value": "peace1"
+          },
+          {
+            "label": "死亡提示2",
+            "value": "peace2"
+          },
+          {
+            "label": "自定义",
+            "value": "custom"
+          }
+        ]
+      },
+      {
+        "id": "volume",
+        "label": "试听音量",
+        "type": "number",
+        "defaultValue": 70,
+        "min": 0,
+        "max": 100
+      },
+      {
+        "id": "slot",
+        "label": "击杀音效类型",
+        "type": "select",
+        "defaultValue": "kill",
+        "options": [
+          {
+            "label": "普通击杀",
+            "value": "kill"
+          },
+          {
+            "label": "爆头击杀",
+            "value": "headKill"
+          },
+          {
+            "label": "1杀",
+            "value": "streak1"
+          },
+          {
+            "label": "2杀",
+            "value": "streak2"
+          },
+          {
+            "label": "3杀",
+            "value": "streak3"
+          },
+          {
+            "label": "4杀",
+            "value": "streak4"
+          },
+          {
+            "label": "5杀",
+            "value": "streak5"
+          },
+          {
+            "label": "6杀",
+            "value": "streak6"
+          },
+          {
+            "label": "7杀",
+            "value": "streak7"
+          },
+          {
+            "label": "8杀",
+            "value": "streak8"
+          }
+        ]
+      },
+      {
+        "id": "file",
+        "label": "导入音频",
+        "type": "file",
+        "defaultValue": ""
+      }
+    ],
+    "actions": [
+      {
+        "id": "preview-kill",
+        "label": "试听击杀",
+        "execution": "local"
+      },
+      {
+        "id": "preview-death",
+        "label": "试听死亡",
+        "execution": "local"
+      },
+      {
+        "id": "import-kill",
+        "label": "导入击杀音频",
+        "execution": "local"
+      },
+      {
+        "id": "import-death",
+        "label": "导入死亡音频",
+        "execution": "local"
+      }
+    ],
+    "localRuntime": {
+      "apiVersion": 1,
+      "type": "node",
+      "entryPoint": "tools.mjs",
+      "arguments": [
+        "--context",
+        "{context}"
+      ]
+    }
+  }
+}

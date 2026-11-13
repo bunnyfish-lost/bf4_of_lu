@@ -1,0 +1,17 @@
+{
+  "bin/BF4AutoAim.exe": "9ce3f37866fb62d042abb65f2feb734e4d12edff9d50b920f6a2adfa10b734a9",
+  "build.ps1": "201686075f9e5e53da7aee659ea29e3f2f1f05d8334bda42d93b16ab6d6f761e",
+  "compatibility.json": "e93f6f4e6eed53ac7a72502526340aeea11d816b5f912f1746085583ba18336a",
+  "entry.mjs": "0a8430c2db07c9effe85d8e068a7e732cfd97b71e7efd09309e71ce5eeaf2bcb",
+  "mod.json": "e74c7087300eca2d6fc30bc5a123859f2c6e6e3c8176141e55844840f34b4b6d",
+  "ORIGIN.md": "9ece7ead6d0525668713fcb4d34fed80d382f48f5a407acb3268835f91efb518",
+  "README.md": "cffee9d87353e10fc85e47ed3568a5704d52ef68806a5a01e6e38acb529dda90",
+  "runtime.mjs": "4740bcc3146733c69217533a5ceac7b71e4ee31805473949cbbfd67ac19ab707",
+  "source/AimCore.cs": "babd9db51fc56036f5522c51d62c9dd216a22d7d365bfec14498bfa5b4b655f8",
+  "source/AssemblyInfo.cs": "22fd86fc4671bb6ffa1e469a0cd61d6aff726253fb2a795fddacf478915233d2",
+  "source/Feature.cs": "2b1953168eba03ce1b3527e4a48b2f5543197af078a00280d2d460b9535cc36b",
+  "source/FeatureRuntime.cs": "245859b3fa0d2ab5ab11f710e1c290899fa5bfe2aa8047f181f76747916572b4",
+  "source/Memory.cs": "0c69816ecaf5b7876d9aaba752bd886e55a1b047aa0058b6fbfb4b71f029cb77",
+  "support/rcon.mjs": "14139ae0013f333814f5d14210ea0c92f9e177ede1ad33f16f4a0cf3e7bbb699",
+  "support/receipt.mjs": "097523193b52948b0bedb86f758fb0b608a1a3507426040a10592f658b6e2765"
+}

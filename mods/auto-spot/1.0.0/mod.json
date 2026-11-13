@@ -1,0 +1,14 @@
+{
+  "id": "auto-spot",
+  "name": "自动标记",
+  "side": "client",
+  "kind": "runtime",
+  "adapter": "vision",
+  "description": "在进入对局前加载可见敌军标记模块。",
+  "fields": [],
+  "formatVersion": 1,
+  "version": "1.0.0",
+  "author": "本地模组库",
+  "operations": [],
+  "dependencies": []
+}

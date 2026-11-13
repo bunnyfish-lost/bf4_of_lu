@@ -1,0 +1,24 @@
+﻿Node.js v24.19.0, Windows x64
+Source: https://nodejs.org/dist/v24.19.0/win-x64/node.exe
+Integrity: checked against node/SHASUMS256.txt from the same official release.
+License: node/LICENSE, including bundled third-party notices.
+
+BF4 LAN BOT ALPHA v0.1 (2026-10-15), by Miksaka_Mikoto_01.
+Author game/server binaries and game assets are not distributed in this archive.
+Setup imports an existing compatible original Server folder supplied by the operator.
+
+Procon is optional and is not distributed in this archive.
+Import preserves the source docs_licenses folder and does not import old accounts or plugins.
+
+This is a community management add-on, not an official EA/DICE server product.
+
+Sound presets
+BF1/BFV/CF clips: https://github.com/m4a1deathDawn/Hit_Kill_Sounds
+Peace Elite death clips: https://www.bilibili.com/video/BV1k39pYGEbh/ (first two excerpts).
+File origins, source hashes and excerpt ranges: sound-packs/SOURCES.json.
+Game names and sound assets belong to their respective owners; this add-on is not affiliated with them.
+
+SharpDX 4.2.0 (Direct3D11 / DXGI / Direct2D1 / DirectComposition)
+Upstream: https://github.com/sharpdx/SharpDX
+License: core/local-fun/SharpDX-LICENSE.txt
+Package source: https://www.nuget.org/packages/SharpDX/4.2.0

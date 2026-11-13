@@ -1,0 +1,10 @@
+{
+  "killEnabled": true,
+  "killPack": "test",
+  "killVolume": 70,
+  "streakEnabled": true,
+  "deathEnabled": false,
+  "deathPack": "peace1",
+  "deathVolume": 30,
+  "playerName": ""
+}

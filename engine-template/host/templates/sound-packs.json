@@ -1,0 +1,21 @@
+{
+  "bf1": {
+    "kill": "builtin-killsound_bf1_normal.wav",
+    "headKill": "builtin-killsound_bf1_headshot.wav"
+  },
+  "bfv": {
+    "kill": "builtin-killsound_bfv_normal.wav"
+  },
+  "cf": {
+    "kill": "builtin-killsound_cf_01.wav",
+    "headKill": "builtin-cf_headshot.wav",
+    "streak1": "builtin-killsound_cf_01.wav",
+    "streak2": "builtin-killsound_cf_02.wav",
+    "streak3": "builtin-killsound_cf_03.wav",
+    "streak4": "builtin-killsound_cf_04.wav",
+    "streak5": "builtin-killsound_cf_05.wav",
+    "streak6": "builtin-killsound_cf_06.wav",
+    "streak7": "builtin-killsound_cf_07.wav",
+    "streak8": "builtin-killsound_cf_08.wav"
+  }
+}
